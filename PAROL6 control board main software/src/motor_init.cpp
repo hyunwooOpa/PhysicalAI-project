@@ -28,7 +28,7 @@ void Init_Joint_1(struct MotorStruct *Joint__)
     Joint__->temperature_error = 0;
     Joint__->temperature_warrning = 0;
     Joint__->microstep = MICROSTEP;
-    Joint__->limit_switch_trigger = 0; // temp since sensor is faulty?
+    Joint__->limit_switch_trigger = 1; // temp since sensor is faulty?
     Joint__->reduction_ratio = 6.4; // 96 / 15
     Joint__->position = -200;
     Joint__->speed = -100;
@@ -122,10 +122,10 @@ void Init_Joint_3(struct MotorStruct *Joint__)
     Joint__->STEP = PUL5;
     Joint__->SELECT = SELECT5;
     Joint__->driver_chip_on_board = 0;
-    Joint__->direction_reversed = 1;
+    Joint__->direction_reversed = 0;
     Joint__->irun = 16;
     Joint__->ihold = 16;
-    Joint__->hold_multiplier = 0.8;
+    Joint__->hold_multiplier = 0.6; -> from 0.8 
     Joint__->over_temp_pre_warning = 0;
     Joint__->over_temp_warning = 0;
     Joint__->diag0 = 0;
@@ -155,7 +155,7 @@ void Init_Joint_4(struct MotorStruct *Joint__)
     Joint__->temperature_error = 0;
     Joint__->temperature_warrning = 0;
     Joint__->microstep = MICROSTEP;
-    Joint__->limit_switch_trigger = 0;
+    Joint__->limit_switch_trigger = 1;
     Joint__->reduction_ratio = 4;
     Joint__->position = 0;
     Joint__->speed = 0;
@@ -165,10 +165,10 @@ void Init_Joint_4(struct MotorStruct *Joint__)
     Joint__->STEP = PUL4;
     Joint__->SELECT = SELECT4;
     Joint__->driver_chip_on_board = 0;
-    Joint__->direction_reversed = 0;
+    Joint__->direction_reversed = 1;
     Joint__->irun = 16;
     Joint__->ihold = 16;
-    Joint__->hold_multiplier = 0.8;
+    Joint__->hold_multiplier = 0.6; from 0.8
     Joint__->over_temp_pre_warning = 0;
     Joint__->over_temp_warning = 0;
     Joint__->diag0 = 0;
@@ -207,10 +207,10 @@ void Init_Joint_5(struct MotorStruct *Joint__)
     Joint__->STEP = PUL2;
     Joint__->SELECT = SELECT2;
     Joint__->driver_chip_on_board = 0;
-    Joint__->direction_reversed = 0;
+    Joint__->direction_reversed = 1;
     Joint__->irun = 16;
     Joint__->ihold = 16;
-    Joint__->hold_multiplier = 0.8;
+    Joint__->hold_multiplier = 0.6; from 0.8
     Joint__->over_temp_pre_warning = 0;
     Joint__->over_temp_warning = 0;
     Joint__->diag0 = 0;
@@ -239,7 +239,7 @@ void Init_Joint_6(struct MotorStruct *Joint__)
     Joint__->temperature_error = 0;
     Joint__->temperature_warrning = 0;
     Joint__->microstep = MICROSTEP;
-    Joint__->limit_switch_trigger = 0;
+    Joint__->limit_switch_trigger = 0.8;
     Joint__->reduction_ratio = 10;
     Joint__->position = 0;
     Joint__->speed = 0;
@@ -249,7 +249,7 @@ void Init_Joint_6(struct MotorStruct *Joint__)
     Joint__->STEP = PUL3;
     Joint__->SELECT = SELECT3;
     Joint__->driver_chip_on_board = 0;
-    Joint__->direction_reversed = 1;
+    Joint__->direction_reversed = 0;
     Joint__->irun = 16;
     Joint__->ihold = 16;
     Joint__->hold_multiplier = 0.88;
